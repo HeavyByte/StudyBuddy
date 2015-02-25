@@ -16,27 +16,29 @@
 	<body>
 	
 		<div class="container">
-		<!--
-		<div class="page-header">
-  			<h1>Study Buddy </br><small>Study session organizer...</small></h1>
-		</div>
-		
-	-->
+
 		<div class="row">
 			<div class="well col-xs-9 col-md-5 pull-right">
-				<h3>Please login</h3>
+				<h3>Register a New Account</h3>
 				<?php echo validation_errors(); ?>
-   				<?php echo form_open('verifylogin'); ?>
+   				<?php echo form_open('verifyregistration'); ?>
 				<hr>
 				<ul>
+					<li>
+						<label for="firstname">Full Name</label><input class="form-control" type="text" id="email" name="firstname" placeholder="First Name"><br>
+						<input class="form-control" type="text" id="email" name="lastname" placeholder="Last Name"></br>
+					</li>
 					<li>
 						<label for="emial">Email</label><input class="form-control" type="text" id="email" name="email" placeholder="exampl@spu.edu"></br>
 					</li>
 					<li>
-						<label for="password" >Password</label><input class="form-control" type="password" id="password" name="password" placeholder="password"></br>
+						<label for="password" >Create Password</label><input class="form-control" type="password" id="password" name="password" placeholder="password"></br>
 					</li>
 					<li>
-						<input type="submit" value="Login"/>
+						<label for="con_password" >Confirm Password</label><input class="form-control" type="password" id="con_password" name="con_password" placeholder="confirm password"></br>
+					</li>
+					<li>
+						<input type="submit" value="Register"/>
 					</li>
 				<?php echo form_close(); ?>
 			</div>

@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- navbar module -->
 <?php $this->load->view('includes/navbar', array('active' => "add")); ?>
 <html lang="en">
   <head>
@@ -16,28 +15,37 @@
 	<body>
 	
 		<div class="container">
-		<!--
-		<div class="page-header">
-  			<h1>Study Buddy </br><small>Study session organizer...</small></h1>
-		</div>
-		
-	-->
+
 		<div class="row">
-			<div class="well col-xs-9 col-md-5 pull-right">
-				<h3>Please login</h3>
+			<div class="well col-xs-9 col-md-9 ">
+				<h3>Thank you for registering with us</h3>
+				<hr/>
 				<?php echo validation_errors(); ?>
-   				<?php echo form_open('verifylogin'); ?>
-				<hr>
-				<ul>
-					<li>
-						<label for="emial">Email</label><input class="form-control" type="text" id="email" name="email" placeholder="exampl@spu.edu"></br>
-					</li>
-					<li>
-						<label for="password" >Password</label><input class="form-control" type="password" id="password" name="password" placeholder="password"></br>
-					</li>
-					<li>
-						<input type="submit" value="Login"/>
-					</li>
+   				<?php echo form_open('verifyemail'); ?>
+				<table>
+					<tr>
+						<p>Please check your @university.edu email for a validation code</p>
+					</tr>
+					<tr>
+						<td>
+						<label for="emial">Email</label>
+							<input class="form-control" type="text" id="email" name="email" placeholder="exampl@spu.edu"></br>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						<label for="valcode">Validation Code</label>
+						<div class="col-xs-8 col-md-8 col-lg-8" style="padding-left: 0;">
+							<input class="form-control" type="text" id="valcode" name="valcode"  placeholder="ABC123"></br>
+						</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						<button type="submit" class="btn btn-default" value="Confirm">Confirm</button>
+						</td>
+					</tr>
+				</table>
 				<?php echo form_close(); ?>
 			</div>
 		</div>
