@@ -7,8 +7,8 @@
     <title>Study Buddy</title>
 
     <!-- Bootstrap -->
-    <link href="assets/css/home.css" rel="stylesheet">
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/css/home.css" rel="stylesheet">
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
     
   </head>
 	<body>
@@ -46,14 +46,20 @@
 		<div class="row">
 			<div class="well col-xs-5 col-md-5 pull-right">
 				<h3>Please login</h3>
+				<?php echo validation_errors(); ?>
+   				<?php echo form_open('verifylogin'); ?>
 				<hr>
 				<ul>
 					<li>
-						<label>Email</label><input class="form-control" type="text" name"username" placeholder="exampl@spu.edu"></br>
+						<label for="emial">Email</label><input class="form-control" type="text" id="email" name="email" placeholder="exampl@spu.edu"></br>
 					</li>
 					<li>
-						<label>Password</label><input class="form-control" type="password" name"password" placeholder="password"></br>
+						<label for="password" >Password</label><input class="form-control" type="password" id="password" name="password" placeholder="password"></br>
 					</li>
+					<li>
+						<input type="submit" value="Login"/>
+					</li>
+				<?php echo form_close(); ?>
 			</div>
 		</div>
 		</div>
@@ -63,6 +69,6 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
   </body>
 </html>
